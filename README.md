@@ -13,23 +13,25 @@ The publisher connects to a Twitch channel as an authenticated user. When sendin
 - If it fits in 500 characters, it's sent like this (encoded as binary via [Bebop](https://github.com/RainwayApp/bebop)):
 ```go
 struct FullMessage {
-	string topic;
-	string data;
+  string topic;
+  string data;
 }
 ```
 
 - Otherwise, it's split into one header and multiple parts, each of which is sent in a separate message:
 ```go
 struct SplitMessageHeader {
-	guid id;
-	string topic;
-	uint16 parts; // Number of parts
-	string data; // First part of data
+  guid id;
+  string topic;
+  uint16 parts; // Number of parts
+  string data; // First part of data
 }
+```
+```go
 struct SplitMessagePart {
-	guid id;
-	uint16 part; // Index of the part
-	string data; // Part of data
+  guid id;
+  uint16 part; // Index of the part
+  string data; // Part of data
 }
 ```
 Once the subscriber receives all the parts, it can reassemble the message. This structure optimizes for as few sent messages as possible.
