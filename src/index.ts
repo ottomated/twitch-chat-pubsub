@@ -6,7 +6,7 @@ import { encodeMessage } from './internal/encode';
 export class Publisher {
 	private client: Client;
 
-	constructor(private channel: string, username: string, password: string) {
+	constructor(public channel: string, username: string, password: string) {
 		this.client = new Client({
 			identity: {
 				username,
@@ -37,7 +37,7 @@ export class Subscriber extends EventEmitter {
 	private client: Client;
 	private decoder: Decoder;
 
-	constructor(private channel: string, username: string) {
+	constructor(public channel: string, username: string) {
 		super();
 		this.decoder = new Decoder();
 		this.client = new Client({
