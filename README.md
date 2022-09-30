@@ -2,6 +2,15 @@
 
 This is a proof-of-concept for using Twitch Chat as a PubSub system. It's not ready for production. Also, Twitch probably doesn't want you to do this, so don't.
 
+![Example](./images/chat.png)
+
+### Decodes to:
+```
+topic1 - Hello, World!
+topic2 - Hello, World!
+topic1 - aaaaaaaaaaaaaaaaaaaaaaaa... (2000 a's)
+```
+
 ## Idea
 
 Twitch Chat is scalable and reachable via websocket. If we have several thousand users who need to receive messages from a central server, we can abuse it as a PubSub system.
