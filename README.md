@@ -47,7 +47,7 @@ This results in a message inflation size of `~110%`, versus the `~133%` of base6
 ## How to use
 
 ```ts
-import { Publisher } from 'twitch-chat-pubsub';
+import { Publisher } from '@ottomated/twitch-chat-pubsub';
 
 const publisher = new Publisher('channel-name', 'chatter-username', 'chatter-oauth-token');
 
@@ -55,7 +55,7 @@ await publisher.publish('topic', 'data');
 ```
 
 ```ts
-import { Subscriber } from 'twitch-chat-pubsub';
+import { Subscriber } from '@ottomated/twitch-chat-pubsub';
 
 const subscriber = new Subscriber('channel-name', 'chatter-username');
 
