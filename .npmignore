@@ -1,0 +1,11 @@
+src
+lib/index.dev.js
+.env
+.eslintrc
+.prettierignore
+.prettierrc
+.yarn
+build.mjs
+watch.mjs
+tsconfig.json
+schema.bop

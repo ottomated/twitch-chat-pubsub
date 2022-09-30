@@ -1,0 +1,17 @@
+union Message {
+	1 -> struct FullMessage {
+		string topic;
+		string data;
+	}
+	2 -> struct SplitMessageHeader {
+		guid id;
+		string topic;
+		uint16 parts;
+		string data;
+	}
+	3 -> struct SplitMessagePart {
+		guid id;
+		uint16 index;
+		string data;
+	}
+}

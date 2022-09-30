@@ -1,0 +1,38 @@
+{
+	"name": "twitch-chat-pubsub",
+	"version": "0.1.0",
+	"author": {
+		"name": "Ottomated",
+		"email": "otto@ottomated.net"
+	},
+	"main": "lib/index.js",
+	"module": "lib/index.mjs",
+	"scripts": {
+		"dev": "node watch.mjs",
+		"prepublish": "node build.mjs",
+		"bebop": "bebopc --files schema.bop --ts lib/internal/models.ts"
+	},
+	"dependencies": {
+		"base-x": "^4.0.0",
+		"bebop": "^2.4.6",
+		"eventemitter3": "^4.0.7",
+		"tmi.js": "^1.8.5",
+		"uuid": "^9.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^18.7.23",
+		"@types/tmi.js": "^1.8.1",
+		"@types/uuid": "^8.3.4",
+		"@typescript-eslint/eslint-plugin": "^5.38.1",
+		"@typescript-eslint/parser": "^5.38.1",
+		"bebop-tools": "^2.4.6",
+		"dotenv": "^16.0.3",
+		"esbuild": "^0.15.10",
+		"eslint": "^8.24.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"prettier": "^2.7.1",
+		"typescript": "^4.8.4"
+	},
+	"packageManager": "yarn@3.2.3"
+}
